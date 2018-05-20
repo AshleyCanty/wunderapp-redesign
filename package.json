@@ -47,6 +47,7 @@
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.19.1",
     "webpack-cli": "^2.1.3"
   }
 }
