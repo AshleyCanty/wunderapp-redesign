@@ -1,1 +1,0 @@
-A non-responsive, one-page website I built using HTML, CSS Flexbox and Vanilla Javascript. It is a redesign based on this UX Design from <a href="https://dribbble.com/shots/1642994-Wunderpass-Landing-Pages/attachments/257357"> Dribbble.com</a>.
