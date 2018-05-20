@@ -1,0 +1,142 @@
+@import "variables";
+
+.header {
+     display: flex;
+     width: 100%;
+     min-width: 700px;
+     justify-content: space-between;
+     position: absolute;
+     top: 0;
+     z-index: 100;
+     padding: 0 12%;
+
+     .brand-logo {
+          margin-top: 20px;
+          .fab.fa-accusoft {
+               color: $orangeMain;
+               font-size: 3rem;
+          }
+
+          span {
+               position: absolute;
+               top: 50%;
+               z-index: 400;
+               margin-left: 10px;
+               font-family: $robotoReg;
+               text-transform: lowercase;
+               font-weight: 400;
+               color: white;
+          }
+     }
+
+     ul {
+          position: absolute;
+          z-index: 400;
+          right: 10%;
+          top: 64%;
+          transform: translateY(-50%);
+          align-self: flex-end;
+          li {
+               display: inline-block;
+               padding: 0 20px;
+
+               a {
+                    position: relative;
+                    font-family: $robotoReg;
+                    font-weight: 100;
+                    color: white;
+                    font-size: .7rem;
+                    text-transform: capitalize;
+                    text-decoration: none;
+               }
+
+               &:nth-child(1),
+               &:nth-child(2),
+               &:nth-child(3) {
+                    a {
+                         padding-bottom: 8px;
+
+                         &:before,
+                         &:after {
+                              content: '';
+                              position: absolute;
+                              bottom: 2px;
+                              left: 0; right: 0;
+                              height: 2px;
+                              background-color: $orangeMain;
+                         }
+                         &:before {
+                              opacity: 0;
+                              transform: translateY(- $distance);
+                              transition: transform 0s $easeOutBack, opacity 0s;
+                         }
+                         &:after {
+                              opacity: 0;
+                              transform: translateY($distance/2);
+                              transition: transform $duration $easeOutBack, opacity $duration;
+                         }
+                         &:hover,
+                         &:focus {
+                              &:before,
+                              &:after {
+                                   opacity: 1;
+                                   transform: translateY(0);
+                              }
+                              &:before {
+                                   transition: transform $duration $easeOutBack, opacity $duration;
+                              }
+                              &:after {
+                                   transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+                              }
+                         }
+                    }
+               }
+
+
+
+               &:nth-last-child(2) {
+                    padding-right: 2.5px;
+                    .menu-link {
+                         text-align: center;
+                         height: 30px;
+                         background: rgba(0,0,0,.37);
+                         width: 30px;
+                         border-radius: 3px;
+                         transition: all .2s ease-in-out;
+
+                         &:hover {
+                              cursor: pointer;
+                              background: rgba(0,0,0,.7);
+                         }
+
+                         a {
+                              position: static;
+                              line-height: 30px;
+                         }
+                    }
+               }
+
+               &:nth-last-child(1) {
+                    padding-left: 2.5px;
+                    .menu-link {
+                         text-align: center;
+                         height: 30px;
+                         background: $orangeMain;
+                         width: 100px;
+                         border-radius: 3px;
+                         transition: all .2s ease-in-out;
+
+                         &:hover {
+                              cursor: pointer;
+                              background: $orangeMainDark;
+                         }
+
+                         a {
+                              position: static;
+                              line-height: 30px;
+                         }
+                    }
+               }
+          }
+     }
+}

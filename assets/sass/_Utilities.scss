@@ -1,0 +1,160 @@
+.utilities {
+     background: $blueSoftBG;
+     padding: 100px 20px 0;
+     border-bottom: 1px solid $blueSoftBorder;
+
+     .col {
+          width: 1120px;
+          height: auto;
+          margin: 0 auto;
+          .row {
+               width: 50%;
+               margin: 0 auto;
+               margin-bottom: 70px;
+               height: auto;
+               text-align: center;
+
+               .paragraphText {
+                    float: none;
+               }
+               .wrapper, .sidecol {
+                    display: flex;
+                    // justify-content: center;
+                    flex-wrap: nowrap;
+
+                    .textbox {
+                         margin: 0 12px;
+                    }
+                    .icon {
+                         margin-top: -20px;
+                         // margin: 0 10px;
+                    }
+               }
+               &.mobile {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-bottom: 0px;
+
+                    .wrapper {
+                         display: flex;
+                         flex-wrap: nowrap;
+
+                         .textbox {
+                              margin: 0 12px;
+                         }
+                         .icon {
+                              margin-top: -20px;
+                              // margin: 0 10px;
+                         }
+                    }
+               }
+          }
+
+          &.left {
+               display: inline-block;
+               padding-top: 75px;
+               height: 420px;
+               width: 30%;
+               .wrapper {
+                    height: 80px;
+                    // width: 310px;
+                    padding: 5px;
+                    text-align: right;
+                    margin: 0 0 20px;
+                    margin-left: -30px;
+
+                    &:nth-child(1){
+                         height: 160px;
+
+                         h4 {
+                              margin-bottom: 10px;
+                         }
+                    }
+                    .textbox {
+                         width: 290px;
+                         padding-right: 10px;
+                         display: inline-block;
+                         margin-left: -13px;
+                    }
+                    .icon {
+                         &.horn {
+                              background: $orangeMain;
+                         }
+                    }
+               }
+          }
+
+          &.right {
+               display: inline-block;
+               padding: 80px 0 0;
+               width: 30%;
+               height: 420px;
+               text-align: left;
+
+
+               .wrapper {
+                    height: 90px;
+                    justify-content: flex-start;
+                    .textbox {
+                         padding-left: 10px;
+                    }
+
+                    .icon {
+                         position: relative;
+                         .fas {
+                              left: 25%;
+                         }
+
+                         &.mobile {
+                              .fas {
+                                   font-size: 1.6rem;
+                                   left: 35%;
+                              }
+                         }
+                    }
+                    .fas.fa-bullhorn {
+
+                    }
+               }
+          }
+     }
+     .mobile-img {
+          display: inline-block;
+          // margin: 0 auto;
+          width: 330px;
+          height: 590px;
+     }
+     .icon {
+          position: relative;
+          background: white;
+          height: 51px;
+          width: 51px;
+          border: 1px solid $greycircle;
+          border-radius: 50%;
+     }
+     .fas {
+          position: absolute;
+          top: 50%;
+          transform: translateX(-50%);
+          transform: translateY(-50%);
+          color: $orangeMain;
+          font-size: 1.5rem;
+
+          &.fa-bullhorn {
+               color: white;
+               left: 21.5%;
+          }
+
+          &.fa-share-alt {
+               left: 23%;
+          }
+
+          &.fa-newspaper {
+               left: 22%;
+
+          }
+     }
+}

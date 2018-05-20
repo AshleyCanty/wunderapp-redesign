@@ -1,0 +1,208 @@
+@import "variables";
+#main-wrap{
+
+     .topImg {
+          position: relative;
+          background: url("/img/times-square.jpg"),;
+          height: 80vh;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          align-items: center;
+          min-height: 550px;
+          min-width: 700px;
+
+          .overlay {
+               height: 100%;
+               min-height: 550px;
+               width: 100%;
+               position: absolute;
+               z-index: 50;
+          	top: 0;
+          	right: 0;
+          	bottom: 0;
+          	left: 0;
+          	background-image: linear-gradient(45deg,$orangeGlow,$blueMain,$orangeGlow);
+          	opacity: .95;
+          }
+
+          h1, h5, span, a {
+               color: white;
+               text-transform: capitalize;
+               font-family: $robotoReg;
+               font-weight: 300;
+               font-size: .75rem;
+          }
+
+
+          .container {
+               position: relative;
+               z-index: 300;
+               height: 350px;
+               max-width: 800px;
+               margin: 0 auto;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+               align-items: center;
+
+               .row {
+
+                    &:nth-child(1) {
+                         display: flex;
+                         flex-basis: 100%;
+                         flex-wrap: wrap;
+                         justify-content: center;
+                         text-align: center;
+
+                         h1 {
+                              font-family: $robotoSlab;
+                              font-weight: 100;
+                              font-size: 3rem;
+                              margin-bottom: 30px;
+                         }
+                    }
+                    &:nth-child(2) {
+                         display: flex;
+                         flex-basis: 100%;
+                         justify-content: center;
+
+                         span {
+                              padding: 10px 20px;
+                              text-transform: lowercase;
+                              font-style: italic;
+                              line-height: 30px;
+                         }
+                    }
+                    &:nth-child(3) {
+                         display: flex;
+                         flex-basis: 100%;
+                         flex-wrap: wrap;
+                         justify-content: center;
+
+                         .col-wrap {
+                              // flex-basis: 100%;
+                              display: flex;
+                              flex-wrap: wrap;
+                              align-items: center;
+                              justify-content: center;
+                              .col {
+                                   margin: 0 auto;
+                                   margin-left: 12px;
+                                   width: 240px;
+                                   .text-wrap {
+                                        padding: 5px 20px;
+                                        padding-left: 15px;
+                                        .fas.fa-check {
+                                             display: inline-block;
+                                             color: $orangeMain;
+                                        }
+                                        h5 {
+                                             margin-left: 16px;
+                                             display: inline-block;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+          .mousewrap {
+               position: absolute;
+               z-index: 7777;
+               bottom: 30px;
+               left: 50%;
+               transform: translateX(-50%);
+               display: block;
+               width: fit-content;
+               text-align: center;
+
+               &:hover {
+                    color: white;
+                    a h5 {
+                         color: white;
+                         -webkit-animation: scale .3s ease;
+                         animation: scale .3s linear;
+                         animation-fill-mode: forwards;
+                         transform-origin: 50% 50%;
+                    }
+
+                    .whitemouse {
+                         opacity: 1;
+                    }
+
+                    img {
+                         color: white;
+                         -webkit-animation: scale .3s ease;
+                         animation: scale .3s linear;
+                         animation-fill-mode: forwards;
+                         transform-origin: 50% 50%;
+                         cursor: pointer;
+                    }
+               }
+               a {
+                    text-decoration: none;
+               }
+               a h5 {
+                    display: block;
+                    font-size: .7rem;
+                    height: fit-content;
+                    color: $greySoft;
+                    margin: 0 auto;
+                    padding: 5px 5px 20px;
+                    -webkit-animation: scaledown .3s ease;
+                    animation: scaledown .3s linear;
+                    animation-fill-mode: forwards;
+                    transform-origin: 50% 50%;
+                    transition: color .3s ease-in-out;
+               }
+               .greymouse {
+                    position: relative;
+                    z-index: 7777;
+               }
+               .whitemouse {
+                    position: absolute;
+                    z-index: 7777;
+                    left: 34%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+               }
+               img {
+                    padding: 0;
+                    display: block;
+                    margin: 0 auto;
+                    height: 30px;
+                    width: 30px;
+                    -webkit-animation: scaledown .3s ease;
+                    animation: scaledown .3s linear;
+                    animation-fill-mode: forwards;
+                    transform-origin: 50% 50%;
+               }
+          }
+
+          @keyframes scaledown {
+            0%{
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            100%{
+              -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+            }
+          }
+
+          @keyframes scale {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            100%{
+              -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+          }
+     }
+}

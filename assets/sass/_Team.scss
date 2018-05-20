@@ -1,0 +1,60 @@
+.team {
+     background: $blueSoftBG;
+     padding-bottom: 80px;
+
+     .row {
+
+          &:nth-child(1) {
+               width: 100%;
+               // height: 136px;
+               margin: 0 auto;
+               margin-bottom: 20px;
+               text-align: center;
+               max-width: 900px;
+               padding: 100px 0;
+          }
+
+          &:nth-child(2) {
+               display: flex;
+               justify-content: center;
+
+               .teamrow {
+                    border-radius: 5px;
+                    background: white;
+                    border: 1px solid $blueSoftBorder;
+                    width: 250px;
+                    height: auto;
+                    padding: 30px 15px;
+                    margin: 0 23px;
+
+                    .paragraphText {
+                         font-style: italic;
+                         font-size: .7rem;
+                    }
+                    .textbox {
+
+                    }
+               }
+
+               .user {
+                    display: block;
+                    margin: 20px auto;
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                    border: 1px solid $blueSoftBorder;
+                    position: relative;
+                    img {
+                         object-fit: fill;
+                         left: 50%;
+                         top: 50%;
+                         transform: translate(-50%, -50%);
+                         position: absolute;
+                         width: 80%;
+                         border-radius: 50%;
+
+                    }
+               }
+          }
+     }
+}

@@ -1,0 +1,256 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+@import "Header";
+@import "TopImg";
+@import "About";
+@import "Utilities";
+@import "Services";
+@import "Features";
+@import "Team";
+@import "Footer";
+
+_:-moz-tree-row(hover), html {
+  scroll-behavior: smooth;/*for firefox*/
+}
+*, html {
+     font-family: $robotoReg;
+     box-sizing: border-box;
+}
+#top {
+     z-index: 9999;
+     font-family: $robotoSlab;
+     padding: 26px 8px 5px;
+     width: 80px;
+     height: 80px;
+     vertical-align: middle;
+     text-align: center;
+     border-radius: 50%;
+     position: fixed;
+     bottom:2px;
+     right: 2px;
+     text-decoration: none;
+     color: white;
+     background: $orangeMain;
+     -webkit-animation: scaledown .3s ease;
+     animation: scaledown .3s linear;
+     animation-fill-mode: forwards;
+     transform-origin: 50% 50%;
+
+
+     &:hover {
+          -webkit-animation: scale .3s ease;
+          animation: scale .3s linear;
+          animation-fill-mode: forwards;
+          transform-origin: 50% 50%;
+          box-shadow: 0px 0px 3px 3px rgba(0,0,0,.1);
+          cursor: pointer;
+     }
+
+}
+@keyframes scaledown {
+ 0%{
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+ }
+ 100%{
+   -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+ }
+}
+
+@keyframes scale {
+ 0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+ }
+ 100%{
+   -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+ }
+}
+
+.qoutes {
+     font-size: .9rem;
+     color: $orangeMain;
+}
+
+.arrow {
+     width: 13px;
+}
+
+.author {
+     color: $blueMain;
+     font-weight: 500;
+     text-transform: capitalize;
+     font-style: normal;
+     font-size: .7rem;
+
+     .social-acct {
+          text-transform: lowercase;
+          font-weight: 500;
+          color: $orangeMain;
+     }
+}
+
+.row-fw {
+     width: 730px !important;
+}
+
+.teamrow {
+     text-align: center;
+     width: 400px;
+}
+.sidecol {
+     display: flex;
+     // justify-content: center;
+     flex-wrap: nowrap;
+     padding: 5px;
+     text-align: right;
+     margin: 0 0 20px;
+     margin-left: -30px;
+
+     .textbox {
+          margin: 0 12px;
+          width: 290px;
+          padding-right: 10px;
+          display: inline-block;
+     }
+     .icon {
+          position: relative;
+          margin-top: -20px;
+          position: relative;
+          background: white;
+          height: 51px;
+          width: 51px;
+          border: 1px solid $greycircle;
+          border-radius: 50%;
+     }
+
+     .fas, .far {
+          position: absolute;
+          top: 50%;
+          transform: translateX(-50%);
+          transform: translateY(-50%);
+          color: $orangeMain;
+          font-size: 1.5rem;
+     }
+     h4 {
+          margin-bottom: 10px;
+     }
+
+}
+.headers {
+     color: $blueH1;
+     font-weight: 300;
+     font-size: 2.4rem;
+}
+
+.smallHeaders {
+     margin-bottom: 0;
+     color: $blueSoftHeader;
+     font-weight: 300;
+     font-size: 1.2rem;
+}
+
+
+.border {
+     margin: 30px auto;
+     height: 2px;
+     width: 55px;
+     float: left;
+     clear: both;
+
+     &.a {
+          background: $blueMain;
+
+          &.first {
+               float: none;
+          }
+     }
+     &.b {
+          background: $orangeMain;
+     }
+}
+
+.paragraphText {
+     line-height: 26px;
+     font-size: 12px;
+     font-weight: 100;
+     color: $blueH1;
+     color: #8F939B;
+     float: left;
+     font-weight: 300;
+
+     &.first {
+          text-align: center;
+          font-size: 15px;
+
+     }
+}
+#pageWrapper {
+     height: 100%;
+}
+
+.wide-img {
+     width: 100%;
+     background: $blueSoftBG;
+     img {
+          width: 100%;
+     }
+}
+
+.m-extra {
+     margin: 0 20px;
+}
+
+body {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     width: 100%;
+     min-width: 1680px;
+     min-height: 768px;
+}
+
+.link {
+     height: 50px;
+     width: 200px;
+     border-radius: 3px;
+     text-align: center;
+     transition: all .2s ease-in-out;
+
+     &:hover {
+          cursor: pointer;
+
+          &.a{
+               background: rgba(0,0,0,.6);
+          }
+          &.b{
+               background: $orangeMainDark;
+          }
+
+     }
+
+     &.a{
+          border: 1px solid white;
+          background: rgba(0,0,0,.3);
+     }
+     &.b{
+          background: $orangeMain;
+
+          &.close {
+               margin: 70px auto;
+               a {
+                    font-weight: 300;
+               }
+          }
+     }
+     a {
+          font-size: .8rem;
+          line-height: 50px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+     }
+}
