@@ -5,33 +5,50 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400|Roboto:100,300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
-  <body>
+  <body onresize="resizeWindow()">
        <div id="pageWrapper">
-            <section class="header">
+            <section id="header-wrap" class="header">
                  <div class="brand-logo"><i class="fab fa-accusoft"></i><span>wunderpass</span></div>
-                 <div id="menu-btn"></div>
-                 <ul>
-                      <li><a href=#>Features</a></li>
-                      <li><a href=#>About Us</a></li>
-                      <li><a href=#>FAQ</a></li>
-                      <li>
-                         <div class="menu-link">
-                              <a href=#>EN</a>
-                         </div>
-                      </li>
-                      <li>
-                         <div class="menu-link">
-                              <a href=#>REQUEST INVITE</a>
-                         </div>
-                      </li>
-                 </ul>
-                 <a id="top" onclick="toTop(); return false;" href="#">Back to Top</a>
+                 <div id="menu-btn">
+                   <i class="fas fa-bars"></i>
+                 </div>
+                 <div id="menu-list-wrap">
+                   <div id="close-btn-sm">
+                     <i class="fas fa-times"></i>
+                   </div>
+                   <ul id="menu-list">
+                        <li>
+                          <i class="fas fa-clipboard-list"></i>
+                          <a href=#>Features</a>
+                        </li>
+                        <li>
+                          <i class="fas fa-users"></i>
+                          <a href=#>About Us</a>
+                        </li>
+                        <li>
+                          <i class="fas fa-question-circle"></i>
+                          <a href=#>FAQ</a>
+                        </li>
+                        <li id="en-btn">
+                           <div class="menu-link">
+                                <a href=#>EN</a>
+                           </div>
+                        </li>
+                        <li id="request-invite-btn">
+                           <div class="menu-link">
+                                <a href=#>REQUEST INVITE</a>
+                           </div>
+                        </li>
+                   </ul>
+                 </div>
+                 <a id="top" onclick="toTop(); return false;" href="#"><i class="fas fa-level-up-alt"></i></a>
             </section>
           <div id="main-wrap">
+            <!-- start of top image -->
             <div class="topImg">
                  <div class="overlay"></div>
                  <div class="container">
@@ -76,11 +93,13 @@
                  <div class="mousewrap">
                      <a onclick="initScroll('worldmap'); return false;" href="#"><h5>Scroll Down</h5></a>
                 <a onclick="initScroll('worldmap'); return false;" href="#">
-                      <img class="greymouse" src="./public/img/mouse.svg" />
-                      <img class="whitemouse" src="./public/img/whitemouse.svg" />
+                      <img class="greymouse" src="img/mouse.svg" />
+                      <img class="whitemouse" src="img/whitemouse.svg" />
                  </a>
                </div>
             </div>
+            <!-- end of top image -->
+            <!-- start of about section -->
             <section class="about">
                  <div class="header-brands">
                       <i class="fab fa-angular"></i>
@@ -97,7 +116,7 @@
                            <p class="paragraphText first">Similique nihil impedit quo minus ruit sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                       </div>
                       <div class="row">
-                           <img class="side-img m-extra" src="./public/img/armor.png"/>
+                           <img class="side-img m-extra" src="img/armor.png"/>
                            <div class="textbox m-extra">
                                 <h4 class="smallHeaders">Quisque Curses et Porttitor</h4>
                                 <div class="border b"></div>
@@ -110,10 +129,10 @@
                                 <div class="border b"></div>
                                 <p class="paragraphText">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
                            </div>
-                           <img src="./public/img/peoplebrowser.png" class="side-img m-extra"/>
+                           <img src="img/peoplebrowser.png" class="side-img m-extra"/>
                       </div>
                       <div class="row">
-                           <img src="./public/img/countrydots.png" class="side-img m-extra"/>
+                           <img src="img/countrydots.png" class="side-img m-extra"/>
                            <div class="textbox m-extra">
                                 <h4 class="smallHeaders">Ut Sagittis Quam</h4>
                                 <div class="border b"></div>
@@ -122,9 +141,9 @@
                       </div>
                  </div>
             </section>
-            <section class="wide-img">
-                 <img src="./public/img/widescreen1.png"/>
-            </section>
+            <!-- start of about section -->
+            <section id="utilities-img" class="wide-img"></section>
+            <!-- start of utlities-->
             <section class="utilities">
                  <div class="col">
                       <div class="row row-fw">
@@ -160,7 +179,7 @@
                                      </div>
                                 </div>
                            </div>
-                           <img src="./public/img/mobile.png" class="mobile-img"/>
+                           <img src="img/mobile.png" class="mobile-img"/>
                            <div class="col right">
                                 <div class="wrapper">
                                      <div class="icon mobile">
@@ -190,6 +209,8 @@
                       </div>
                  </div>
             </section>
+            <!-- end of utlities-->
+            <!-- start of services-->
             <section class="services">
                  <div class="row row-fw">
                       <div class="col">
@@ -204,7 +225,7 @@
                  </div>
                  <div class="row">
                       <div class="wrapper">
-                           <img src="./public/img/darts.png"/>
+                           <img src="img/darts.png"/>
                            <div class="textbox">
                                 <h4 class="smallHeaders">Integer Aliquam Purus</h4>
                                 <div class="border b"></div>
@@ -212,7 +233,7 @@
                            </div>
                       </div>
                       <div class="wrapper">
-                           <img src="./public/img/devices.png"/>
+                           <img src="img/devices.png"/>
                            <div class="textbox">
                                 <h4 class="smallHeaders">Phasellus Fermentum Dolor</h4>
                                 <div class="border b"></div>
@@ -220,7 +241,7 @@
                            </div>
                       </div>
                       <div class="wrapper">
-                           <img id="box" class=" box" src="./public/img/box.png"/>
+                           <img id="box" class=" box" src="img/box.png"/>
                            <div class="textbox">
                                 <h4 class="smallHeaders">Vestibulum commodo volut</h4>
                                 <div class="border b"></div>
@@ -229,9 +250,9 @@
                       </div>
                  </div>
             </section>
-            <section class="wide-img">
-                 <img src="./public/img/widescreen2.png"/>
-            </section>
+            <!-- start of services-->
+            <section id="features-img" class="wide-img"></section>
+            <!-- start of features-->
             <section class="features">
                  <div class="row">
                       <div class="col">
@@ -283,9 +304,11 @@
                                </div>
                           </div>
                      </div>
-                     <img src="./public/img/chart.png"/>
-               </div>
+                <div id="chart-img"></div>
+              </div>
             </section>
+            <!-- end of features-->
+            <!-- start of team -->
             <section class="team">
                  <div class="row row-fw">
                       <div class="col">
@@ -307,7 +330,7 @@
                                 </div>
                            </div>
                            <div class="user">
-                              <img src="./public/img/ryan.jpg"/>
+                              <img src="img/ryan.jpg"/>
                            </div>
                       </div>
                       <div class="outer">
@@ -318,7 +341,7 @@
                                 </div>
                            </div>
                            <div class="user">
-                              <img src="./public/img/sza.jpg"/>
+                              <img src="img/sza.jpg"/>
                            </div>
                       </div>
                       <div class="outer">
@@ -329,41 +352,92 @@
                                 <span class="author">- Andre <span class="social-acct">@3stacks.buzz</span></span>
                            </div>
                            <div class="user">
-                              <img src="./public/img/andre.png"/>
+                              <img src="img/andre.png"/>
                            </div>
                       </div>
 
                  </div>
 
             </section>
-            <section class="wide-img">
-                 <img src="./public/img/widescreen3.png"/>
-            </section>
+            <!-- end of team -->
+            <section id="team-img" class="wide-img"></section>
+            <!-- start of worldmap -->
             <section id="worldmap" class="worldmap">
                  <h1 class="headers">Vestibulum Dapibus Mauris</h1>
-                 <img src="./public/img/countrybrands.png"/>
+                 <img src="img/countrybrands.png"/>
                  <div class="link b close">
                       <a href="#">request invite</a>
                  </div>
             </section>
+            <!-- end of worldmap -->
+            <!-- start of footer -->
             <section id="footer" class="footer">
-                 <ul class="extras">
-                      <li>Wunderpass 2014 &copy; All Rights Reserved.</li>
-                      <li>Features</li>
-                      <li>About Us</li>
-                      <li>FAQ</li>
-                 </ul>
+              <div class="footer-text">
+                <h5 id="copyright">Wunderpass 2014 &copy; All Rights Reserved.</h5>
+                   <ul class="extras">
+                        <li>Features</li>
+                        <li>About Us</li>
+                        <li>FAQ</li>
+                   </ul>
+              </div>
 
                  <ul class="socialmedia">
                       <li><i class="fab fa-twitter-square"></i></li>
                       <li><i class="fab fa-facebook-square"></i></li>
                  </ul>
-
             </section>
+            <!-- end of footer -->
        </div>
 
        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/swifticons" title="Swifticons">Swifticons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
-    <script src="./public/js/index.js"></script>
+    <script>
+      let closeBtn = document.getElementById("close-btn-sm");
+      let menuBtn = document.getElementById("menu-btn");
+      let sidebar = document.getElementById('menu-list-wrap');
+      let mainWrap = document.getElementById('main-wrap');
+      let width = document.body.clientWidth;
+
+      function resizeWindow(){
+        if(width > 1025){
+          if(sidebar.classList.contains('hideMenu')){
+            sidebar.classList.remove('hideMenu')
+          }
+          if(sidebar.classList.contains('showMenu')){
+            sidebar.classList.remove('showMenu')
+          }
+        }
+      }
+
+      menuBtn.addEventListener('click', function(event){
+        if(sidebar.classList.contains('showMenu')){
+          sidebar.classList.remove('showMenu');
+          sidebar.classList.add('hideMenu');
+        }else{
+          sidebar.classList.remove('hideMenu');
+          sidebar.classList.add('showMenu');
+        }
+      })
+
+      mainWrap.addEventListener('click', ()=>{
+        if(event.target !== sidebar || event.target !== menuBtn){
+          if(sidebar.classList.contains('showMenu')){
+            sidebar.classList.remove('showMenu');
+            sidebar.classList.add('hideMenu')
+          }
+        }
+      })
+
+      closeBtn.addEventListener('click', function(event){
+        if(sidebar.classList.contains('showMenu')){
+          sidebar.classList.remove('showMenu');
+          sidebar.classList.add('hideMenu');
+        }else{
+          sidebar.classList.remove('hideMenu');
+          sidebar.classList.add('showMenu');
+        }
+      })
+    </script>
+    <script src="/public/js/index.js"></script>
     <script src="https://unpkg.com/ionicons@4.1.1/dist/ionicons.js"></script>
   </body>
 </html>

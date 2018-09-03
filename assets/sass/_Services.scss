@@ -1,68 +1,122 @@
 .services {
-     padding: 120px 10px 120px;
-     .row {
-          &:nth-child(1) {
-               width: 730px;
-               height: 136px;
-               margin: 0 auto;
-               margin-bottom: 80px;
-               text-align: center;
+  padding: 80px 0px;
+  .row {
+    &:nth-child(1) {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 80px;
+      text-align: center;
+    }
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
 
+      .wrapper {
+        text-align: center;
+        display: flex;
+        width: 350px;
+        height: 445px;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &:nth-child(3){
+          margin-bottom: 0;
+        }
+
+        .textbox{
+          display: flex;
+          flex-direction: column;
+          h4 {
+            font-size: 1.7rem;
+            font-weight: 300;
           }
-          &:nth-child(2) {
-               display: flex;
-               justify-content: center;
-               flex-wrap: wrap;
-               align-items: center;
-
-               .wrapper {
-                    text-align: center;
-                    display: inline-block;
-                    width: 350px;
-                    margin: 0 40px;
-                    h4 {
-                         font-size: 1.7rem;
-                         font-weight: 300;
-                    }
-                    p {
-
-                    }
-                    &:nth-child(1) {
-                         img {
-                              width: 206px;
-                              margin-top: -30px;
-                         }
-                    }
-                    &:nth-child(2) {
-                         img {
-                              width: 267px;
-                              // margin-top: -25px;
-                         }
-                    }
-
-                    &:nth-child(3) {
-                         img {
-                              width: 300px;
-                              margin-top: -56px;
-                         }
-                    }
-                    img {
-                         width: 270px;
-                         margin-bottom: 25px;
-
-                         .box {
-                              width: 290px;
-                         }
-                    }
-
-                    .border {
-                         float: none;
-                    }
-               }
-               .col {
-                    width: 300px;
-                    height: 300px;
-               }
+          .border.b{
+            align-self: center;
           }
-     }
+        }
+
+        img{
+          align-self: center;
+        }
+
+        &:nth-child(1) {
+          img {
+            width: 206px;
+            margin-top: -30px;
+          }
+        }
+        &:nth-child(2) {
+          img {
+            width: 267px;
+          }
+        }
+
+        &:nth-child(3) {
+          img {
+            width: 300px;
+          }
+        }
+
+        img {
+          width: 270px;
+          margin-bottom: 25px;
+          .box {
+            width: 290px;
+          }
+        }
+        .border {
+            float: none;
+          }
+        }
+      .col {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1025px){
+  .services .row:nth-child(1){
+    .paragraphText.first {
+      margin: 0 auto;
+      width: 90%;
+      max-width: 1000px;
+    }
+  }
+  .services .row:nth-child(2){
+    .wrapper{
+      width: 350px;
+      max-width: 600px;
+      margin: 0 40px 60px;
+    }
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 1024px){
+  .services .row:nth-child(1){
+    .paragraphText.first {
+      margin: 0 auto;
+      width: 90%;
+      max-width: 1000px;
+    }
+  }
+
+  .services .row:nth-child(2){
+    .wrapper{
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 10px 60px;
+
+      .textbox{
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+  }
 }
